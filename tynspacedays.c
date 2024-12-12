@@ -10,6 +10,10 @@
 #include "include/ru.h"
 #include "include/screenplay.h"
 
+#if defined(PLATFORM_WEB)
+#include <emscripten/emscripten.h>
+#endif
+
 typedef struct AppState {
     int screen;
     ScreenplayScene sp_scene;
@@ -162,7 +166,11 @@ void run() {
 
     load();
 
+#if defined(PLATFORM_WEB)
+    emscripten_set_main_loop(step, 0, 1);
+#else
      while(loop()) {};
+#endif
 }
 
 void init() {

@@ -3,12 +3,11 @@
 
 
 #ifdef __DEBUG__
-#define RES_PATH "res/"
+#define RESOURCES_PATH "../resources/"
 #else
-#define RES_PATH "../res/"
+#define RESOURCES_PATH "resources/"
 #endif
 
-#define RESOURCES_PATH RES_PATH "resources/"
 #define SHADERS_PATH  RESOURCES_PATH "shaders/"
 #define TEXTURES_PATH  RESOURCES_PATH "textures/"
 #define SOUNDS_PATH RESOURCES_PATH "audio/"
