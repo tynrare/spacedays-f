@@ -88,7 +88,9 @@ ScreenplaySceneConf screenplay_scene_a_conf = {
         0.9   //  inputs hint
      }
 };
-int scene_a(ScreenplayScene *scene, bool commit) {
+int scene_a(RenderTexture2D rt, ScreenplayScene *scene, bool commit) {
+	BeginTextureMode(rt);
+	ClearBackground(BLACK);
     const ScreenplaySceneConf *conf = &screenplay_scene_a_conf;
     
     int _page = scene->page;
@@ -111,6 +113,7 @@ int scene_a(ScreenplayScene *scene, bool commit) {
     print_screenplay_text("Story mode.", 1, pd[1], pd[2], e);
     print_screenplay_text("SPACE, ENTER, LMB для продолжения.", 3, pd[2], pd[3], e);
      
+		EndTextureMode();
      return 0;
 }
 
@@ -125,7 +128,9 @@ ScreenplaySceneConf screenplay_scene_b_conf = {
      }
 };
 
-int scene_b(ScreenplayScene *scene, bool commit) {
+int scene_b(RenderTexture2D rt, ScreenplayScene *scene, bool commit) {
+		BeginTextureMode(rt);
+		ClearBackground(BLACK);
     const ScreenplaySceneConf *conf = &screenplay_scene_b_conf;
     
    // int _page = scene->page;
@@ -174,8 +179,9 @@ int scene_b(ScreenplayScene *scene, bool commit) {
             0, hearts_tint
          );
     draw_text_ru("0", viewport_w - picsize - pad - 32, pad * 2 + picsize - 6, hearts_tint);
-        
-     return 0;
+
+		EndTextureMode();
+		return 0;
 }
 
 

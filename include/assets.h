@@ -4,6 +4,7 @@
 
 #include "raylib.h"
 #include "resources.h"
+#include "index.h"
 
 #include "rlgl.h"
 

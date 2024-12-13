@@ -5,7 +5,7 @@
 
 #define SCREENPLAYS_COUNT 3
 
-int (*screenplays[SCREENPLAYS_COUNT])(ScreenplayScene *, bool) = {
+int (*screenplays[SCREENPLAYS_COUNT])(RenderTexture2D, ScreenplayScene *, bool) = {
     scene_a,
     scene_b,
     scene_test_dzensun

@@ -16,7 +16,7 @@ var Module = typeof Module != 'undefined' ? Module : {};
 
 // --pre-jses are emitted after the Module integration code, so that they can
 // refer to Module (if they choose; they can also define Module)
-// include: /tmp/tmpghbzjxu5.js
+// include: /tmp/tmpi4pvttqz.js
 
   if (!Module.expectedDataFileDownloads) {
     Module.expectedDataFileDownloads = 0;
@@ -194,11 +194,11 @@ Module['FS_createPath']("/resources", "textures", true, true);
     }
 
     }
-    loadPackage({"files": [{"filename": "/resources/audio/chip-lay-1.ogg", "start": 0, "end": 5720, "audio": 1}, {"filename": "/resources/audio/ready.ogg", "start": 5720, "end": 22738, "audio": 1}, {"filename": "/resources/audio/story_mode.ogg", "start": 22738, "end": 48383, "audio": 1}, {"filename": "/resources/audio/switch1.ogg", "start": 48383, "end": 54487, "audio": 1}, {"filename": "/resources/monogram-extended.ttf", "start": 54487, "end": 113223}, {"filename": "/resources/shaders/chromakey.fs", "start": 113223, "end": 113800}, {"filename": "/resources/shaders/sprite_generic.fs", "start": 113800, "end": 115195}, {"filename": "/resources/shaders/sprite_sdf.fs", "start": 115195, "end": 116599}, {"filename": "/resources/shaders/vfx_goldflames.fs", "start": 116599, "end": 117974}, {"filename": "/resources/textures/hexagon.png", "start": 117974, "end": 118969}, {"filename": "/resources/textures/noise-d.png", "start": 118969, "end": 897306}, {"filename": "/resources/textures/noise0.png", "start": 897306, "end": 1220189}, {"filename": "/resources/textures/palette.png", "start": 1220189, "end": 1220386}, {"filename": "/resources/textures/particle0.png", "start": 1220386, "end": 1220656}, {"filename": "/resources/textures/particle1.png", "start": 1220656, "end": 1226747}, {"filename": "/resources/textures/suit_hearts.png", "start": 1226747, "end": 1227875}], "remote_package_size": 1227875});
+    loadPackage({"files": [{"filename": "/resources/audio/chip-lay-1.ogg", "start": 0, "end": 5720, "audio": 1}, {"filename": "/resources/audio/ready.ogg", "start": 5720, "end": 22738, "audio": 1}, {"filename": "/resources/audio/story_mode.ogg", "start": 22738, "end": 48383, "audio": 1}, {"filename": "/resources/audio/switch1.ogg", "start": 48383, "end": 54487, "audio": 1}, {"filename": "/resources/monogram-extended.ttf", "start": 54487, "end": 113223}, {"filename": "/resources/shaders/chromakey.fs", "start": 113223, "end": 113800}, {"filename": "/resources/shaders/sprite_generic.fs", "start": 113800, "end": 115195}, {"filename": "/resources/shaders/sprite_sdf.fs", "start": 115195, "end": 116600}, {"filename": "/resources/shaders/vfx_goldflames.fs", "start": 116600, "end": 118052}, {"filename": "/resources/textures/hexagon.png", "start": 118052, "end": 119047}, {"filename": "/resources/textures/noise-d.png", "start": 119047, "end": 897384}, {"filename": "/resources/textures/noise0.png", "start": 897384, "end": 1220267}, {"filename": "/resources/textures/palette.png", "start": 1220267, "end": 1220464}, {"filename": "/resources/textures/particle0.png", "start": 1220464, "end": 1220734}, {"filename": "/resources/textures/particle1.png", "start": 1220734, "end": 1226825}, {"filename": "/resources/textures/suit_hearts.png", "start": 1226825, "end": 1227953}], "remote_package_size": 1227953});
 
   })();
 
-// end include: /tmp/tmpghbzjxu5.js
+// end include: /tmp/tmpi4pvttqz.js
 
 
 // Sometimes an existing Module object exists with properties
@@ -7480,6 +7480,9 @@ function GetWindowInnerHeight() { return window.innerHeight; }
 
 
 
+
+
+
   
   
   
@@ -9445,7 +9448,13 @@ var wasmImports = {
   /** @export */
   glBindTexture: _glBindTexture,
   /** @export */
+  glBlendEquation: _glBlendEquation,
+  /** @export */
+  glBlendEquationSeparate: _glBlendEquationSeparate,
+  /** @export */
   glBlendFunc: _glBlendFunc,
+  /** @export */
+  glBlendFuncSeparate: _glBlendFuncSeparate,
   /** @export */
   glBufferData: _glBufferData,
   /** @export */
@@ -9638,14 +9647,14 @@ var stackRestore = (a0) => (stackRestore = wasmExports['stackRestore'])(a0);
 var stackAlloc = (a0) => (stackAlloc = wasmExports['stackAlloc'])(a0);
 var dynCall_viiiii = Module['dynCall_viiiii'] = (a0, a1, a2, a3, a4, a5) => (dynCall_viiiii = Module['dynCall_viiiii'] = wasmExports['dynCall_viiiii'])(a0, a1, a2, a3, a4, a5);
 var dynCall_v = Module['dynCall_v'] = (a0) => (dynCall_v = Module['dynCall_v'] = wasmExports['dynCall_v'])(a0);
-var dynCall_iii = Module['dynCall_iii'] = (a0, a1, a2) => (dynCall_iii = Module['dynCall_iii'] = wasmExports['dynCall_iii'])(a0, a1, a2);
+var dynCall_iiii = Module['dynCall_iiii'] = (a0, a1, a2, a3) => (dynCall_iiii = Module['dynCall_iiii'] = wasmExports['dynCall_iiii'])(a0, a1, a2, a3);
 var dynCall_vii = Module['dynCall_vii'] = (a0, a1, a2) => (dynCall_vii = Module['dynCall_vii'] = wasmExports['dynCall_vii'])(a0, a1, a2);
 var dynCall_viii = Module['dynCall_viii'] = (a0, a1, a2, a3) => (dynCall_viii = Module['dynCall_viii'] = wasmExports['dynCall_viii'])(a0, a1, a2, a3);
 var dynCall_viff = Module['dynCall_viff'] = (a0, a1, a2, a3) => (dynCall_viff = Module['dynCall_viff'] = wasmExports['dynCall_viff'])(a0, a1, a2, a3);
 var dynCall_viiii = Module['dynCall_viiii'] = (a0, a1, a2, a3, a4) => (dynCall_viiii = Module['dynCall_viiii'] = wasmExports['dynCall_viiii'])(a0, a1, a2, a3, a4);
 var dynCall_vidd = Module['dynCall_vidd'] = (a0, a1, a2, a3) => (dynCall_vidd = Module['dynCall_vidd'] = wasmExports['dynCall_vidd'])(a0, a1, a2, a3);
 var dynCall_ii = Module['dynCall_ii'] = (a0, a1) => (dynCall_ii = Module['dynCall_ii'] = wasmExports['dynCall_ii'])(a0, a1);
-var dynCall_iiii = Module['dynCall_iiii'] = (a0, a1, a2, a3) => (dynCall_iiii = Module['dynCall_iiii'] = wasmExports['dynCall_iiii'])(a0, a1, a2, a3);
+var dynCall_iii = Module['dynCall_iii'] = (a0, a1, a2) => (dynCall_iii = Module['dynCall_iii'] = wasmExports['dynCall_iii'])(a0, a1, a2);
 var dynCall_iiiii = Module['dynCall_iiiii'] = (a0, a1, a2, a3, a4) => (dynCall_iiiii = Module['dynCall_iiiii'] = wasmExports['dynCall_iiiii'])(a0, a1, a2, a3, a4);
 var dynCall_iiiji = Module['dynCall_iiiji'] = (a0, a1, a2, a3, a4, a5) => (dynCall_iiiji = Module['dynCall_iiiji'] = wasmExports['dynCall_iiiji'])(a0, a1, a2, a3, a4, a5);
 var dynCall_iiiiiii = Module['dynCall_iiiiiii'] = (a0, a1, a2, a3, a4, a5, a6) => (dynCall_iiiiiii = Module['dynCall_iiiiiii'] = wasmExports['dynCall_iiiiiii'])(a0, a1, a2, a3, a4, a5, a6);

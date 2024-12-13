@@ -10,16 +10,6 @@ void draw_lint_x(int y) {
 void draw_lint_y(int x) {
     DrawLine(x, 0, x, viewport_h, RED);    
 }
-
-void DrawTextureFlipped(Texture texture, Color tint) {
-        DrawTexturePro(
-            texture, 
-            (Rectangle){ 0, 0, texture.width, -texture.height }, 
-            (Rectangle){ 0, 0, texture.width, texture.height }, 
-            (Vector2) { 0,0 }, 
-            0 * RAD2DEG, tint);
-}
-
 void draw_grid() {
     draw_lint_x(2);
     draw_lint_x(viewport_h - 2);

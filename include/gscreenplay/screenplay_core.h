@@ -1,4 +1,6 @@
 #include "../math.h"
+#include <string.h>
+#include "../ru.h"
 
 #ifndef SCREENPLAY_CORE_H
 #define SCREENPLAY_CORE_H
