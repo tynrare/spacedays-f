@@ -1,33 +1,11 @@
 #ifndef SCREENPLAY_H
 #define SCREENPLAY_H
 
-#include "ru.h"
-#include "math.h"
-#include "assets.h"
-#include "index.h"
-
-#define SCREENPLAY_DEBUG
-
-typedef struct ScreenplayScene {
-    int page;
-    float elapsed;
-    float progress;
-} ScreenplayScene;
-
-typedef struct ScreenplaySceneConf {
-    float duration;
-    int pages_count;
-    bool hold;
-    float pages_durations[8];
-} ScreenplaySceneConf;
-
-void print_screenplay_text_pos(
-    const char *text, float ta, float tb, float e, int x, int y, Color c
-) {
-    const float p = nmap(ta, tb, e);
-    const char *t = TextFormat("%.*s",  (int)(strlen(text) * p), text);
-    draw_text_ru( t, x, y, c);
-}
+#include "../ru.h"
+#include "../math.h"
+#include "../assets.h"
+#include "../index.h"
+#include "./screenplay_core.h"
 
 void print_screenplay_text_color(const char *text, int index, float ta, float tb, float e, Color c) {
     print_screenplay_text_pos(text, ta, tb, e, 16, (rufont_size + 2) * index + 16, c);
@@ -200,11 +178,5 @@ int scene_b(ScreenplayScene *scene, bool commit) {
      return 0;
 }
 
-#define SCREENPLAYS_COUNT 2
-
-int (*screenplays[SCREENPLAYS_COUNT])(ScreenplayScene *, bool) = {
-    scene_a,
-    scene_b
-};
 
 #endif

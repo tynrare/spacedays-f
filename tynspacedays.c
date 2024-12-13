@@ -8,7 +8,7 @@
 #include "include/misc.h"
 #include "include/index.h"
 #include "include/ru.h"
-#include "include/screenplay.h"
+#include "include/gscreenplay/index.h"
 
 #if defined(PLATFORM_WEB)
 #include <emscripten/emscripten.h>
@@ -108,8 +108,26 @@ void draw() {
         ap->f = 0;
     } 
 
-    draw_fin();
-    //DrawTexture(assets->tex_noise1, 0, 0, WHITE);
+    
+    BeginShaderMode(ASSET_SHADER_SDF);
+    BeginTextureMode(arender->rt_f1);
+    ClearBackground(BLACK);
+    DrawTextureFlipped(arender->rt_f0.texture, WHITE);
+    EndTextureMode();
+    EndShaderMode();
+    
+    BeginTextureMode(arender->rt_f2);
+    TynShaderGeneric goldflames = ASSET_GSHADER_VFX_GOLDFLAMES;
+    BeginShaderMode(goldflames.shader);
+    SetShaderValueTexture(goldflames.shader, goldflames.tnoise0_loc, ASSET_TEXTURE_NOISE0);
+    SetShaderValueTexture(goldflames.shader, goldflames.tnoise1_loc, assets->tex_noise1);
+    DrawTextureFlipped(arender->rt_f1.texture, WHITE);
+    EndShaderMode();
+    EndTextureMode();
+    
+    
+    //draw_fin();
+    DrawTextureFlipped(arender->rt_f2.texture, WHITE);
     draw_grid();
 }
 
@@ -175,7 +193,7 @@ void run() {
 
 void init() {
     ap = malloc(sizeof(AppState));
-    ap->screen = 0;
+    ap->screen = 2;
     ap->sp_scene.elapsed = 0;
     ap->sp_scene.page = 0;
     ap->f = 0;

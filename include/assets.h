@@ -12,7 +12,7 @@
 
 
 #define ASSETS_SOUNDS_COUNT 4
-#define ASSETS_TEXTURES_COUNT 4
+#define ASSETS_TEXTURES_COUNT 6
 #define ASSETS_SHADERS_COUNT 4
 
 static const char* const assets_sounds_filenames[] = {
@@ -26,7 +26,9 @@ static const char* const assets_textures_filenames[] = {
     TEXTURES_PATH "palette.png",
     TEXTURES_PATH "suit_hearts.png",
     TEXTURES_PATH "hexagon.png",
-    TEXTURES_PATH "noise0.png"
+    TEXTURES_PATH "noise0.png",
+    TEXTURES_PATH "particle0.png",
+    TEXTURES_PATH "particle1.png",
 };
 
 typedef struct TynShaderGeneric {
@@ -49,30 +51,32 @@ typedef struct Assets {
     Sound sounds[ASSETS_SOUNDS_COUNT];
     int audio_file_mod_times[ASSETS_SOUNDS_COUNT];
     Texture textures[ASSETS_TEXTURES_COUNT];
-     int texture_file_mod_times[ASSETS_SOUNDS_COUNT];
-     TynShaderGeneric shaders[ASSETS_SHADERS_COUNT];
-     int shader_file_mod_times[ASSETS_SHADERS_COUNT];
-     Texture tex_noise1;
+    int texture_file_mod_times[ASSETS_TEXTURES_COUNT];
+    TynShaderGeneric shaders[ASSETS_SHADERS_COUNT];
+    int shader_file_mod_times[ASSETS_SHADERS_COUNT];
+    Texture tex_noise1;
 } Assets;
 
 Assets *assets = { 0 };
 
-#define ASSET_SOUND_STORYMODE   assets->sounds[0]
-#define ASSET_SOUND_SWITCH1            assets->sounds[1]
-#define ASSET_SOUND_CHIP1                   assets->sounds[2]
-#define ASSET_SOUND_READY                 assets->sounds[3]
+#define ASSET_SOUND_STORYMODE           assets->sounds[0]
+#define ASSET_SOUND_SWITCH1             assets->sounds[1]
+#define ASSET_SOUND_CHIP1               assets->sounds[2]
+#define ASSET_SOUND_READY               assets->sounds[3]
 
-#define ASSET_TEXTURE_PALETTE     assets->textures[0]
-#define ASSET_TEXTURE_HEART           assets->textures[1]
-#define ASSET_TEXTURE_HEXAGON   assets->textures[2]
-#define ASSET_TEXTURE_NOISE0         assets->textures[3]
+#define ASSET_TEXTURE_PALETTE           assets->textures[0]
+#define ASSET_TEXTURE_HEART             assets->textures[1]
+#define ASSET_TEXTURE_HEXAGON           assets->textures[2]
+#define ASSET_TEXTURE_NOISE0            assets->textures[3]
+#define ASSET_TEXTURE_PARTICLE0         assets->textures[4]
+#define ASSET_TEXTURE_PARTICLE1         assets->textures[5]
 
-#define ASSET_GSHADER_VFX_GOLDFLAMES assets->shaders[3]
 
-#define ASSET_SHADER_SPRITE_GENERIC       assets->shaders[0].shader
-#define ASSET_SHADER_CHROMAKEY                    assets->shaders[1].shader
-#define ASSET_SHADER_SDF                                           assets->shaders[2].shader
-#define ASSET_SHADER_VFX_GOLDFLAMES    ASSET_GSHADER_VFX_GOLDFLAMES.shader
+#define ASSET_SHADER_SPRITE_GENERIC     assets->shaders[0].shader
+#define ASSET_SHADER_CHROMAKEY          assets->shaders[1].shader
+#define ASSET_SHADER_SDF                assets->shaders[2].shader
+#define ASSET_GSHADER_VFX_GOLDFLAMES    assets->shaders[3]
+#define ASSET_SHADER_VFX_GOLDFLAMES     ASSET_GSHADER_VFX_GOLDFLAMES.shader
 
 static void assets_load_sound(Assets *assets, int index) {
     Sound sound = LoadSound(assets_sounds_filenames[index]);
