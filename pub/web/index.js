@@ -16,7 +16,7 @@ var Module = typeof Module != 'undefined' ? Module : {};
 
 // --pre-jses are emitted after the Module integration code, so that they can
 // refer to Module (if they choose; they can also define Module)
-// include: /tmp/tmpi4pvttqz.js
+// include: /tmp/tmprv5u5ir5.js
 
   if (!Module.expectedDataFileDownloads) {
     Module.expectedDataFileDownloads = 0;
@@ -194,11 +194,11 @@ Module['FS_createPath']("/resources", "textures", true, true);
     }
 
     }
-    loadPackage({"files": [{"filename": "/resources/audio/chip-lay-1.ogg", "start": 0, "end": 5720, "audio": 1}, {"filename": "/resources/audio/ready.ogg", "start": 5720, "end": 22738, "audio": 1}, {"filename": "/resources/audio/story_mode.ogg", "start": 22738, "end": 48383, "audio": 1}, {"filename": "/resources/audio/switch1.ogg", "start": 48383, "end": 54487, "audio": 1}, {"filename": "/resources/monogram-extended.ttf", "start": 54487, "end": 113223}, {"filename": "/resources/shaders/chromakey.fs", "start": 113223, "end": 113800}, {"filename": "/resources/shaders/sprite_generic.fs", "start": 113800, "end": 115195}, {"filename": "/resources/shaders/sprite_sdf.fs", "start": 115195, "end": 116600}, {"filename": "/resources/shaders/vfx_goldflames.fs", "start": 116600, "end": 118052}, {"filename": "/resources/textures/hexagon.png", "start": 118052, "end": 119047}, {"filename": "/resources/textures/noise-d.png", "start": 119047, "end": 897384}, {"filename": "/resources/textures/noise0.png", "start": 897384, "end": 1220267}, {"filename": "/resources/textures/palette.png", "start": 1220267, "end": 1220464}, {"filename": "/resources/textures/particle0.png", "start": 1220464, "end": 1220734}, {"filename": "/resources/textures/particle1.png", "start": 1220734, "end": 1226825}, {"filename": "/resources/textures/suit_hearts.png", "start": 1226825, "end": 1227953}], "remote_package_size": 1227953});
+    loadPackage({"files": [{"filename": "/resources/audio/chip-lay-1.ogg", "start": 0, "end": 5720, "audio": 1}, {"filename": "/resources/audio/ready.ogg", "start": 5720, "end": 22738, "audio": 1}, {"filename": "/resources/audio/story_mode.ogg", "start": 22738, "end": 48383, "audio": 1}, {"filename": "/resources/audio/switch1.ogg", "start": 48383, "end": 54487, "audio": 1}, {"filename": "/resources/monogram-extended.ttf", "start": 54487, "end": 113223}, {"filename": "/resources/shaders/chromakey.fs", "start": 113223, "end": 113800}, {"filename": "/resources/shaders/sprite_generic.fs", "start": 113800, "end": 115195}, {"filename": "/resources/shaders/sprite_sdf.fs", "start": 115195, "end": 116600}, {"filename": "/resources/shaders/vfx_goldflames.fs", "start": 116600, "end": 118052}, {"filename": "/resources/textures/hexagon.png", "start": 118052, "end": 119047}, {"filename": "/resources/textures/noise-d.png", "start": 119047, "end": 897384}, {"filename": "/resources/textures/noise0.png", "start": 897384, "end": 1220267}, {"filename": "/resources/textures/palette.png", "start": 1220267, "end": 1220464}, {"filename": "/resources/textures/particle0.png", "start": 1220464, "end": 1220734}, {"filename": "/resources/textures/particle1.png", "start": 1220734, "end": 1226016}, {"filename": "/resources/textures/suit_hearts.png", "start": 1226016, "end": 1227144}], "remote_package_size": 1227144});
 
   })();
 
-// end include: /tmp/tmpi4pvttqz.js
+// end include: /tmp/tmprv5u5ir5.js
 
 
 // Sometimes an existing Module object exists with properties
